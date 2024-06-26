@@ -1,11 +1,11 @@
 <?php
 namespace Department;
 
+use BaseClass;
+
 require_once './User.php';
 
-class Department {
-    private $db;
-
+class Department extends BaseClass{
 	private User\User $user;
 
 	public function __construct() {
