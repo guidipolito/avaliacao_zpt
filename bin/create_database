@@ -1,0 +1,3 @@
+#!/bin/bash
+DB_STRUCTURE_PATH="$(dirname -- "$0")/db_structure.sql"
+docker exec -i zpt_test_db sh -c "mariadb -proot" < $DB_STRUCTURE_PATH
