@@ -106,4 +106,9 @@ INNER JOIN department dept ON u_d.department = dept.id
 
 9) Crie a classe `CompanyClient`, que é uma `Company` que, além do `id`, tem um número chamado `registration`. A saudação deve exibir o `id` e o `registration`.
 
+* foi criado a classe CompanyClient que é uma company
+    * passa pela função quando  `function requiresCompany(Company $company){}`
+* modificado id para ser protected e acessivel para a classes que herdam Company
+* adicionado registration e novo metodo com mesma assinatura de greetings
+
 10) Qual commit introduziu [este erro](./src/Department.php#L10)? Explique e corrija o erro.
