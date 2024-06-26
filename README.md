@@ -97,6 +97,10 @@ INNER JOIN department dept ON u_d.department = dept.id
 
 8) Utilize a API https://ipinfo.io/json via JavaScript para consultar o IP do usuário e exibir na lacuna designada em [./src/index.html](./src/index.html).
 
+* simples fetch e append no elemento de ID 'ip'
+* adblocks como ublock origin bloqueiam a requisição e fazem o navegador retornar erro de cors.
+    * caso o ip não apareça verifique as extensões
+
 9) Crie a classe `CompanyClient`, que é uma `Company` que, além do `id`, tem um número chamado `registration`. A saudação deve exibir o `id` e o `registration`.
 
 10) Qual commit introduziu [este erro](./src/Department.php#L10)? Explique e corrija o erro.
