@@ -70,6 +70,24 @@ CREATE TABLE `user_department` (
 
 5) O que pode ser feito para deixar a query abaixo mais rápida?
 
+```sql
+SELECT dept.id FROM user
+INNER JOIN user_department u_d ON u_d.user = user.id
+INNER JOIN department dept ON u_d.department = dept.id
+WHERE user.username = 'zpt'
+```
+
+* nessa query acredito que estavamos fazendo varios joins e depois filtrando
+* mas a filtragem não depende do resultado desses joins, somente da tabela user
+    * considerar no join todos os usuarios da tabela pode ser desnecessario já que literalmente só queremos o zpt
+* a minha solução seria filtrar primeiro a tabela user e utilizar esse resultado para fazer o join
+
+```sql
+SELECT dept.id FROM (SELECT id FROM `user` WHERE username = 'joao') as user_q
+INNER JOIN user_department u_d ON u_d.user = user_q.id
+INNER JOIN department dept ON u_d.department = dept.id
+```
+
 6) A classe `User` tem o método `setDb()` que recebe uma conexão com o banco de dados. As classes `Company` e `Department` precisam ter esse mesmo método, idêntico. Implemente.
 
 7) [Esta função](./src/Utils.php#L4) permite atribuir uma conexão em estilo procedural. Faça a função aceitar instâncias de `Company` e `Department` também.
