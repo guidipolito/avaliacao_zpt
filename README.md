@@ -41,18 +41,18 @@ CREATE TABLE `user_department` (
 
 1) Desenhe o MER.
 
-1. Levantei um container de mariadb 
-    $docker-compose up$
-2. Separei a estrutura em um arquivo sql dentro de bin
-3. Criei a estrutura com o comando do executavel [create_database](./bin/create_database)
-4. Extrai com DBeaver o modelo lógico
+* Levantei um container de mariadb 
+*   $docker-compose up$
+* Separei a estrutura em um arquivo sql dentro de bin
+* Criei a estrutura com o comando do executavel [create_database](./bin/create_database)
+* Extrai com DBeaver o modelo lógico
 ![](./images/ex_1_der.png)
 
 
 2) O método em [/src/User.php#L7-L15](./src/User.php#L4-L11) está muito lento. Deixe-o mais rápido. Esse método é em pseudocódigo PHP, isto é, não é possível executá-lo de fato. Sua solução pode ser em pseudocódigo também.
 
-1. Ao ver o código um problema obvio é estar fazendo a query dentro de um looping, fazendo ir e voltar do banco de dados varias vezes
-2. Removi o loop e adicionei para a query ser feita com o where usando "id IN (id, id...)"
+* Ao ver o código um problema obvio é estar fazendo a query dentro de um looping, fazendo ir e voltar do banco de dados varias vezes
+* Removi o loop e adicionei para a query ser feita com o where usando "id IN (id, id...)"
 
 3) Ainda referente ao método da questão anterior, melhore o nome dele.
 
