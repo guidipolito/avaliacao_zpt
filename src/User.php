@@ -4,7 +4,7 @@ namespace User;
 class User {
 	private $db;
 
-	public function g($ids) {
+	public function find_many($ids) {
 		$users = [];
 
         $users[] = $this->db->q('SELECT username FROM user WHERE id IN (' . implode(',', $ids) . ')');
