@@ -112,3 +112,11 @@ INNER JOIN department dept ON u_d.department = dept.id
 * adicionado registration e novo metodo com mesma assinatura de greetings
 
 10) Qual commit introduziu [este erro](./src/Department.php#L10)? Explique e corrija o erro.
+
+* ``` 
+    b72835e5 zpt (2023-09-12 22:25):                                               │
+    feat(department): get ready to allow operations on User from inside Department
+   ```
+* eu não sei exatamente o seria para retornar nesse user, mas o problema dessa linha mais 
+    óbvio é que se esta tentando referenciar a class User a partir do namespace Department, 
+    se é necessario começar do inicio com \User\User ou dar um "use User\User" no inicio do arquivo
