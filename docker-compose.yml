@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: zpt_test_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: zpt_test
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    networks:
+      - mariadb_network
+
+volumes:
+  mariadb_data:
+
+networks:
+  mariadb_network:
+    driver: bridge
