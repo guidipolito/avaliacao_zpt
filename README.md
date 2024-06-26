@@ -56,6 +56,9 @@ CREATE TABLE `user_department` (
 
 3) Ainda referente ao método da questão anterior, melhore o nome dele.
 
+* normalmente quando usamos um framework, o metodo find do orm leva um unico id para retornar um registro
+* utilizar find_many com um array de ids me parece ser a alternativa mais legivel
+
 4) Tomando por base o pseudocódigo que já existe, implemente um método que retorne o maior departamento (o que tiver mais `employees`) de cada usuário, isto é, de todos os usuários de uma vez, sem qualquer filtro.
 
 5) O que pode ser feito para deixar a query abaixo mais rápida?
