@@ -51,6 +51,9 @@ CREATE TABLE `user_department` (
 
 2) O método em [/src/User.php#L7-L15](./src/User.php#L4-L11) está muito lento. Deixe-o mais rápido. Esse método é em pseudocódigo PHP, isto é, não é possível executá-lo de fato. Sua solução pode ser em pseudocódigo também.
 
+1. Ao ver o código um problema obvio é estar fazendo a query dentro de um looping, fazendo ir e voltar do banco de dados varias vezes
+2. Removi o loop e adicionei para a query ser feita com o where usando "id IN (id, id...)"
+
 3) Ainda referente ao método da questão anterior, melhore o nome dele.
 
 4) Tomando por base o pseudocódigo que já existe, implemente um método que retorne o maior departamento (o que tiver mais `employees`) de cada usuário, isto é, de todos os usuários de uma vez, sem qualquer filtro.
