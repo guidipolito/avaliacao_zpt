@@ -61,14 +61,14 @@ CREATE TABLE `user_department` (
 
 4) Tomando por base o pseudocódigo que já existe, implemente um método que retorne o maior departamento (o que tiver mais `employees`) de cada usuário, isto é, de todos os usuários de uma vez, sem qualquer filtro.
 
-5) O que pode ser feito para deixar a query abaixo mais rápida?
+* optei por implementar um metodo estatico na classe Departamento que realiza essa query em especifico retornando o departamento
+    * porem nessa questão me vêm a duvida, há um contador de employees em cada registro de departamento. Meu primeiro pensamento era de fazer um agrupamento na tabela user_department
+    * o termo user pode ser uma entidade diferente de employee, os users do departamento de marketing poderiam muito be ser clientes que o marketing atende, nessa questão seria necessario exclarecer essa duvida para prosseguir com segurança
+    * o prazo é amanhã e a questão pede especificamente para utilizar a coluna employees, mas no dia dia de trabalho eu com certeza tentaria entender melhor essa diferença de terminologia
+    * `Department::largest()` supostamente retornaria o maior
 
-```sql
-SELECT dept.id FROM user
-INNER JOIN user_department u_d ON u_d.user = user.id
-INNER JOIN department dept ON u_d.department = dept.id
-WHERE user.username = 'zpt'
-```
+
+5) O que pode ser feito para deixar a query abaixo mais rápida?
 
 6) A classe `User` tem o método `setDb()` que recebe uma conexão com o banco de dados. As classes `Company` e `Department` precisam ter esse mesmo método, idêntico. Implemente.
 
