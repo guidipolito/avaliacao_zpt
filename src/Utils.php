@@ -1,7 +1,7 @@
 <?php
 require_once './User.php';
 
-function setDb(User\User $user, $db) {
+function setDb(BaseClass $user, $db) {
 	$user->setDb($db);
 }
 
