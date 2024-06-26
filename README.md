@@ -42,7 +42,7 @@ CREATE TABLE `user_department` (
 1) Desenhe o MER.
 
 * Levantei um container de mariadb 
-*   $docker-compose up$
+*   `docker-compose up`
 * Separei a estrutura em um arquivo sql dentro de bin
 * Criei a estrutura com o comando do executavel [create_database](./bin/create_database)
 * Extrai com DBeaver o modelo lógico
