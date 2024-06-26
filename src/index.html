@@ -7,5 +7,13 @@
 </head>
 <body>
 	<p>My IP is <span id="ip"/></p>
+    <script>
+        fetch('https://ipinfo.io/json')
+            .then(res=>res.text())
+            .then(text=>{
+                data = JSON.parse(text)
+                document.getElementById('ip').innerHTML = data.ip
+            })
+    </script>
 </body>
 </html>
