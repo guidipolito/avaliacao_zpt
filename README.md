@@ -90,6 +90,9 @@ INNER JOIN department dept ON u_d.department = dept.id
 
 6) A classe `User` tem o método `setDb()` que recebe uma conexão com o banco de dados. As classes `Company` e `Department` precisam ter esse mesmo método, idêntico. Implemente.
 
+* criado a classe abstrata BaseClass que serve para possibilitar que outras classes acessem o bando de dados e metodos em comun
+* o attributo db foi de private para protected para poder ser usado na herança
+
 7) [Esta função](./src/Utils.php#L4) permite atribuir uma conexão em estilo procedural. Faça a função aceitar instâncias de `Company` e `Department` também.
 
 8) Utilize a API https://ipinfo.io/json via JavaScript para consultar o IP do usuário e exibir na lacuna designada em [./src/index.html](./src/index.html).
