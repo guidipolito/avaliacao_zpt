@@ -95,6 +95,9 @@ INNER JOIN department dept ON u_d.department = dept.id
 
 7) [Esta função](./src/Utils.php#L4) permite atribuir uma conexão em estilo procedural. Faça a função aceitar instâncias de `Company` e `Department` também.
 
+* Na questão anterior foi adicionado a classe abstrata BaseClass
+* trocando \User\User por \BaseClass podemos fazer com que a função aceite agora também Company e Department
+
 8) Utilize a API https://ipinfo.io/json via JavaScript para consultar o IP do usuário e exibir na lacuna designada em [./src/index.html](./src/index.html).
 
 9) Crie a classe `CompanyClient`, que é uma `Company` que, além do `id`, tem um número chamado `registration`. A saudação deve exibir o `id` e o `registration`.
